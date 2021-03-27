@@ -3,7 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment">
+    tools:context=".ResultFragment">
+
+    <TextView
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="50dp"
+        android:drawableStart="@drawable/ic_back"
+        android:textColor="@color/black"
+        android:text=" Result"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,47 +23,45 @@
         android:layout_margin="20dp"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/eEmail"
-            android:inputType="textEmailAddress"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:padding="10dp"
-            android:background="@drawable/border_grey"
-            android:hint="Masukkan e-mail anda"
-            android:textSize="17sp" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:text="Selamat Registrasi Berhasil !"/>
 
         <EditText
-            android:id="@+id/ePassword"
-            android:inputType="textPassword"
+            android:id="@+id/tNama"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:padding="10dp"
             android:background="@drawable/border_grey"
-            android:layout_marginTop="10dp"
-            android:hint="Masukkan password anda"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            android:layout_marginBottom="10dp"
+            android:text="Nama"/>
+
+        <EditText
+            android:id="@+id/tEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:background="@drawable/border_grey"
+            android:textSize="17sp"
+            android:layout_marginBottom="10dp"
+            android:text="Email"/>
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnBackLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_mint"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:text="LOGIN"/>
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/bg_mint"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:text="Register"/>
+            android:text="Back to Login"/>
 
     </LinearLayout>
+
 
 </RelativeLayout>

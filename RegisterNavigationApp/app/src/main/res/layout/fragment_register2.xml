@@ -3,7 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment">
+    tools:context=".Register2Fragment">
+
+    <TextView
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="50dp"
+        android:drawableStart="@drawable/ic_back"
+        android:textColor="@color/black"
+        android:text=" Step 2"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,47 +23,45 @@
         android:layout_margin="20dp"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/eEmail"
-            android:inputType="textEmailAddress"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:padding="10dp"
-            android:background="@drawable/border_grey"
-            android:hint="Masukkan e-mail anda"
-            android:textSize="17sp" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Halo $nama, untuk melanjutkan registrasi, silahkan buat password di bawah "/>
 
         <EditText
             android:id="@+id/ePassword"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="20dp"
             android:padding="10dp"
             android:background="@drawable/border_grey"
+            android:hint="Buat password anda"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/eConfirmPassword"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:hint="Masukkan password anda"
+            android:padding="10dp"
+            android:background="@drawable/border_grey"
+            android:hint="Ketik ulang password anda"
             android:textSize="17sp" />
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnFinish"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_mint"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
-            android:text="LOGIN"/>
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_mint"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:text="Register"/>
+            android:text="FINISH"/>
 
     </LinearLayout>
+
 
 </RelativeLayout>
