@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_register1.*
@@ -30,7 +31,16 @@ class Register1Fragment : Fragment(), View.OnClickListener {
 
     override fun onClick(view: View?) {
         when(view?.id){
-            R.id.btnNext -> navController.navigate(R.id.action_register1Fragment_to_register2Fragment)
+            R.id.btnNext -> {
+                if (eNama.text.toString().isEmpty()){
+                    eNama.error = "Nama harus diisi !"
+                }else if (eEmail.text.toString().isEmpty()){
+                    eEmail.error = "E-mail harus diisi !"
+                }else{
+                    val bundle = bundleOf("nm" to eNama.text.toString(), "em" to eEmail.text.toString())
+                    navController.navigate(R.id.action_register1Fragment_to_register2Fragment, bundle)
+                }
+            }
             R.id.btnBack -> activity?.onBackPressed()
         }
     }

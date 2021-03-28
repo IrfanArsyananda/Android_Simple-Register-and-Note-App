@@ -31,7 +31,7 @@
             android:layout_marginBottom="20dp"
             android:text="Selamat Registrasi Berhasil !"/>
 
-        <EditText
+        <TextView
             android:id="@+id/tNama"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -41,7 +41,7 @@
             android:layout_marginBottom="10dp"
             android:text="Nama"/>
 
-        <EditText
+        <TextView
             android:id="@+id/tEmail"
             android:layout_width="match_parent"
             android:layout_height="50dp"

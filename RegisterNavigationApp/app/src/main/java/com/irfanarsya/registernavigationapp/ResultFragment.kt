@@ -12,6 +12,9 @@ import kotlinx.android.synthetic.main.fragment_result.*
 class ResultFragment : Fragment(), View.OnClickListener {
 
     lateinit var navController: NavController
+    var get_name:String? = null
+    var get_email:String? = null
+    var get_password:String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,11 +24,21 @@ class ResultFragment : Fragment(), View.OnClickListener {
         return inflater.inflate(R.layout.fragment_result, container, false)
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        get_name = arguments?.getString("nm")
+        get_email = arguments?.getString("em")
+        get_password = arguments?.getString("pw")
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
         btnBack.setOnClickListener(this)
         btnBackLogin.setOnClickListener(this)
+
+        tNama.text = get_name
+        tEmail.text = get_email
     }
 
     override fun onClick(view: View?) {
