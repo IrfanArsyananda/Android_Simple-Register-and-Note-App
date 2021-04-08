@@ -5,11 +5,6 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/mainFragment">
     <fragment
-        android:id="@+id/homeFragment3"
-        android:name="com.irfanarsya.registernavigationapp.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
         android:id="@+id/mainFragment"
         android:name="com.irfanarsya.registernavigationapp.MainFragment"
         android:label="fragment_main"
@@ -22,8 +17,8 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"/>
         <action
-            android:id="@+id/action_mainFragment_to_homeFragment3"
-            app:destination="@id/homeFragment3"
+            android:id="@+id/action_mainFragment_to_homeActivity"
+            app:destination="@id/homeActivity"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
             app:enterAnim="@anim/slide_in_right"
@@ -60,4 +55,9 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"/>
     </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.irfanarsya.registernavigationapp.home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 </navigation>
