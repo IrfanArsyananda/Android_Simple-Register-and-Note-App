@@ -15,6 +15,6 @@ interface DaoNotes {
     fun updateNotes(notes: Notes)
 
     @Delete
-    fun deleteNews(notes: Notes)
+    fun deleteNote(notes: Notes)
 
 }

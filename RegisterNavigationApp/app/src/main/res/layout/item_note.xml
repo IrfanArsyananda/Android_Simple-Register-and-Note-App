@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tDate" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -44,20 +44,23 @@
         app:srcCompat="@drawable/ic_delete" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
         app:layout_constraintTop_toBottomOf="@+id/tNote"
         app:srcCompat="@drawable/ic_edit" />
 
     <View
-        android:id="@+id/view4"
+        android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        android:background="@color/sunflower_low"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
