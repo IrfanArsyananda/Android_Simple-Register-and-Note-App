@@ -1,8 +1,8 @@
 # Simple-Register-Navigation
 # Note-ROOM-Database  
 Implementasi :
-- Navigation Jetpack
-- Fragment
+- Android Navigation Jetpack
+- Fragment UI
 - CRUD ROOM Database
 
 Hasil UI :  
